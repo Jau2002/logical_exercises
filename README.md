@@ -1,1 +1,1 @@
-# logical_exercises
+# LOGICAL EXERCISES
