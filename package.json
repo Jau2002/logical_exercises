@@ -3,9 +3,10 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
-		"test": "jest",
 		"lint": "eslint --fix --quiet --color \"src/**/*.ts\"",
+		"test": "NODE_OPTIONS=--experimental-vm-modules && jest",
 		"dev": "tsnd --respawn --transpile-only --module-experimental --quiet --cls ./src/number_systems/converter.ts"
 	},
 	"repository": {
@@ -55,9 +56,28 @@
 		"singleAttributePerLine": true
 	},
 	"jest": {
-		"preset": "ts-jest",
+		"verbose": true,
 		"testEnvironment": "node",
-		"verbose": true
+		"globals": {
+			"ts-jest": {
+				"isolatedModules": true
+			}
+		},
+		"transform": {
+			"^.+\\.ts?$": "ts-jest"
+		},
+		"extensionsToTreatAsEsm": [
+			".ts"
+		],
+		"collectCoverage": true,
+		"coverageThreshold": {
+			"global": {
+				"branches": 100,
+				"functions": 100,
+				"lines": 100,
+				"statements": 100
+			}
+		}
 	},
 	"eslintConfig": {
 		"env": {
