@@ -1,0 +1,22 @@
+{
+	"verbose": true,
+	"testEnvironment": "node",
+	"globals": {
+		"ts-jest": {
+			"isolatedModules": true
+		}
+	},
+	"transform": {
+		"^.+\\.ts?$": "ts-jest"
+	},
+	"extensionsToTreatAsEsm": [".ts"],
+	"collectCoverage": true,
+	"coverageThreshold": {
+		"global": {
+			"branches": 100,
+			"functions": 100,
+			"lines": 100,
+			"statements": 100
+		}
+	}
+}
