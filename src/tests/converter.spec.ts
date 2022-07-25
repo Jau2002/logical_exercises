@@ -1,19 +1,23 @@
 import { binarioDecimal, decimalBinario } from '../number_systems/converter';
 
-describe('binary to decimal', () => {
+xdescribe('binary to decimal', () => {
+	const [resultOne, resultTwo] = [2, 7];
+	const [actualOne, actualTwo] = ['10', '111'];
 	it('should return 2', () => {
-		expect(binarioDecimal('10')).toBe(2);
+		expect(binarioDecimal(actualOne)).toBe(resultOne);
 	});
 	it('should return 7', () => {
-		expect(binarioDecimal('111')).toBe(7);
+		expect(binarioDecimal(actualTwo)).toBe(resultTwo);
 	});
 });
 
-describe('decimal to binary', () => {
+xdescribe('decimal to binary', () => {
+	const [actualOne, actualTwo] = [4, 7];
+	const [resultOne, resultTwo] = ['100', '111'];
 	it('should return "100"', () => {
-		expect(decimalBinario(4)).toBe('100');
+		expect(decimalBinario(actualOne)).toBe(resultOne);
 	});
 	it('should return "111"', () => {
-		expect(decimalBinario(7)).toBe('111');
+		expect(decimalBinario(actualTwo)).toBe(resultTwo);
 	});
 });
