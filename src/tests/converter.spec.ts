@@ -1,6 +1,6 @@
 import { binarioDecimal, decimalBinario } from '../number_systems/converter';
 
-xdescribe('binary to decimal', () => {
+describe('binary to decimal', () => {
 	const [resultOne, resultTwo] = [2, 7];
 	const [actualOne, actualTwo] = ['10', '111'];
 	it('should return 2', () => {
@@ -11,7 +11,7 @@ xdescribe('binary to decimal', () => {
 	});
 });
 
-xdescribe('decimal to binary', () => {
+describe('decimal to binary', () => {
 	const [actualOne, actualTwo] = [4, 7];
 	const [resultOne, resultTwo] = ['100', '111'];
 	it('should return "100"', () => {

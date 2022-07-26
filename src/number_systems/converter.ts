@@ -1,7 +1,9 @@
-function binarioDecimal(str: any): number {
+function binarioDecimal(str: string): number {
 	let decimal: number = 0;
+	const bits: number = Number(str.length);
 	for (let i: number = 0; i < str.length; i++) {
-		decimal += str[i] * 2 ** (str.length - 1 - i);
+		const digits: number = Number(str[i]);
+		decimal += digits * 2 ** (bits - 1 - i);
 	}
 	return decimal;
 }
