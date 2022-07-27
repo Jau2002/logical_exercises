@@ -8,8 +8,6 @@ function counter(): accountant {
 	};
 }
 
-function cacheL1() {}
-
 /**
  * * Composición interna
  * Los datos en la memoria caché se alojan en distintos niveles según la frecuencia de uso que tengan. La información puede transferirse entre los distintos niveles de forma inclusiva o exclusiva:
@@ -32,4 +30,4 @@ function cacheL1() {}
  * Es más rápida que la memoria principal (RAM), pero más lenta y mayor que L2, ayuda a que el sistema guarde gran cantidad de información, agilizando las tareas del procesador. En esta memoria se agiliza el acceso a datos e instrucciones que no se localizaron en L1 o L2. Al igual que la L2, puede ser inclusiva y contener una copia de L2 además de información extra o, por el contrario, ser exclusiva y contener información totalmente diferente a la de los niveles anteriores, consiguiendo así una mayor capacidad total.
  */
 
-export { counter, cacheL1 };
+export default counter;

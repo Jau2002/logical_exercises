@@ -1,4 +1,4 @@
-import { counter } from '../closures_recursion/closures';
+import counter from '../closures_recursion/closures';
 
 describe('counter', () => {
 	it('should return a function', () => {
