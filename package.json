@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"lint": "eslint -c \".eslintrc.json\" --fix --quiet --color \"src/**/*.ts\"",
+		"lint": "eslint -c \".eslintrc.json\" --fix --color \"src/**/*.ts\"",
 		"test": "NODE_OPTIONS=--experimental-vm-modules && jest --config \".jestrc.json\"",
 		"dev": "tsnd --respawn --transpile-only --module-experimental --quiet --cls ./src/number_systems/converter.ts"
 	},
