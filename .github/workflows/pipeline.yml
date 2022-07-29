@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: 16.14.0
           cache: 'npm'
+      - name: Install Dependencies
+        run: npm ci
       - name: Eslint Perse
         run: npm run lint
 
@@ -42,5 +44,7 @@ jobs:
         with:
           node-version: 16.14.0
           cache: 'npm'
+      - name: Install Dependencies
+        run: npm ci
       - name: Testing
         run: npm test
